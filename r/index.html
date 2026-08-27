@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Taka's Socials">
+    <meta property="og:description" content="Pssst, if you add a redirect query to me, the destination changes.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#3472a5">
+    <meta property="og:url" content="https://taka-lgbt.github.io/r">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>Redirecting...</title>
+
+<script>
+const redirect = new URLSearchParams(window.location.search).get("redirect");
+
+const redirects = {
+youtube: "https://youtube.com/@takalgbt",
+bsky: "https://bsky.app/profile/takalgbt.bsky.social",
+github: "https://github.com/takalgbt",
+gmail: "mailto:taka.lgbt@gmail.com",
+twitch: "https://twitch.tv/takalgbt"};
+
+let redirectTo = redirects[redirect] || "https://taka-lgbt.github.io/home";
+
+window.location.href = redirectTo;
+
+</script>
+</head>
+<body>
+<p>Redirecting...</p>
+</body>
+</html>
