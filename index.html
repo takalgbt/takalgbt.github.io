@@ -4,14 +4,14 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="Taka's Socials">
-    <meta property="og:description" content="Pssst, if you add a redirect query to me, the destination changes.">
+    <meta property="og:title" content="Taka's Site">
+    <meta property="og:description" content="Pssst, check out Taka's personal site.">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#3472a5">
     <meta property="og:url" content="https://taka-lgbt.github.io/r">
     <meta name="twitter:card" content="summary_large_image">
 
-    <title>Redirecting...</title>
+    <title>Taka's Site</title>
 
 <script>
 const redirect = new URLSearchParams(window.location.search).get("redirect");
@@ -24,11 +24,11 @@ gmail: "mailto:taka.lgbt@gmail.com"};
 
 let redirectTo = redirects[redirect]
 
-window.location.href = redirectTo;
+(if redirectTo) { window.location.href = redirectTo; }
 
 </script>
 </head>
 <body>
-<p>Redirecting...</p>
+<p>Nothing to be found here yet, W.I.P.</p>
 </body>
 </html>
