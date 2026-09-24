@@ -14,6 +14,8 @@ Wanna do something fun together? You can reach me at [u/takalgbt](https://reddit
 | [Twitch](?redirect=twitch) | takalgbt |
 | [Reddit](?redirect=reddit) | takalgbt |
 
----
+## Community
+Wanna join our community? Click [here](http://reddit.com/taka_loves_her_skirt) or go to [r/taka_loves_her_skirt](http://reddit.com/taka_loves_her_skirt) on [reddit](http://reddit.com).
 
+---
 | [Contact](mailto:takalgbt@gmail.com) | [Source](https://github.com/takalgbt/takalgbt.github.io) |
