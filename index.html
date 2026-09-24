@@ -45,7 +45,7 @@ reddit: "https://reddit.com/u/takalgbt"};
 
 let redirectTo = redirects[redirect];
 
-if (redirectTo) { window.location.href = redirectTo; } else { window.location.href = "?parse=homepage"; }
+if (redirectTo) { window.location.href = redirectTo; } else if (!redirectTo && !parsePage) { window.location.href = "?parse=homepage"; }
 </script>
 </head>
 <body>
