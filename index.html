@@ -14,7 +14,26 @@
     <title>Taka's Site</title>
 
 <script>
+import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 const redirect = new URLSearchParams(window.location.search).get("redirect");
+const parse = new URLSearchParams(window.location.search).get("parse");
+
+const parses = {
+homepage: "/md/homepage.md"};
+
+let parsePage = parses[parse];
+
+if (parsePage) { 
+fetch(`https://raw.githubusercontent.com/takalgbt/takalgbt.github.io/main/${parsePage}`)
+.then(function(response) {
+return response.text(); 
+})
+.then(function(data) {
+document.body.innerHTML = marked.parse(data); 
+})
+.catch(function(error) {
+console.error("Error", error);
+})
 
 const redirects = {
 youtube: "https://youtube.com/@takalgbt",
@@ -24,7 +43,7 @@ gmail: "mailto:takalgbt@gmail.com",
 twitch: "https://twitch.tv/takalgbt",
 reddit: "https://reddit.com/u/takalgbt"};
 
-let redirectTo = redirects[redirect]
+let redirectTo = redirects[redirect];
 
 if (redirectTo) { window.location.href = redirectTo; }
 </script>
