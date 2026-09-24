@@ -13,7 +13,7 @@
 
     <title>Taka's Site</title>
 
-<script>
+<script type="module">
 import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 const redirect = new URLSearchParams(window.location.search).get("redirect");
 const parse = new URLSearchParams(window.location.search).get("parse");
@@ -33,7 +33,7 @@ document.body.innerHTML = marked.parse(data);
 })
 .catch(function(error) {
 console.error("Error", error);
-})
+})}
 
 const redirects = {
 youtube: "https://youtube.com/@takalgbt",
@@ -45,10 +45,10 @@ reddit: "https://reddit.com/u/takalgbt"};
 
 let redirectTo = redirects[redirect];
 
-if (redirectTo) { window.location.href = redirectTo; }
+if (redirectTo) { window.location.href = redirectTo; } else { window.location.href = "?parse=homepage"; }
 </script>
 </head>
 <body>
-<p>Nothing to be found here yet, W.I.P.</p>
+<p>If you see this, something went wrong, your internet connection sucks, or your client is preventing JS from being executed.</p>
 </body>
 </html>
