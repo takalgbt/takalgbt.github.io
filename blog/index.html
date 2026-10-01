@@ -20,7 +20,7 @@ const id = new URLSearchParams(window.location.search).get("post-id");
 if (id) { 
 fetch(`https://raw.githubusercontent.com/takalgbt/takalgbt.github.io/main/md/blog-post/${id}.md`)
 .then(function(response) {
-if (!response.ok) { window.location.href = "/?parse=homepage" return; } 
+if (!response.ok) { window.location.href = "/?parse=homepage"; return; } 
 return response.text(); 
 })
 .then(function(data) {
