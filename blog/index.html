@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Taka's Blog">
+    <meta property="og:description" content="Pssst, check out Taka's blog.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#3472a5">
+    <meta property="og:url" content="https://taka-lgbt.github.io/blog">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>Taka's Site</title>
+
+<script type="module">
+import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+const id = new URLSearchParams(window.location.search).get("post-id");
+
+if (id) { 
+fetch(`https://raw.githubusercontent.com/takalgbt/takalgbt.github.io/main/md/blog-post/${id}.md`)
+.then(function(response) {
+if (!response.ok) { window.location.href = "/?parse=homepage" return; } 
+return response.text(); 
+})
+.then(function(data) {
+document.body.innerHTML = marked.parse(data); 
+})
+.catch(function(error) {
+console.error("Error", error);
+window.location.href = "/?parse=homepage";
+})}
+</script>
+</head>
+<body>
+<p>Something went wrong, or this page is still loading.</p>
+</body>
+</html>
